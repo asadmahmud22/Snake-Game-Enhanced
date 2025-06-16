@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game Enhanced</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="game-header">
+        <h1 class="game-title">🐍 SNAKE GAME</h1>
+      </div>
+
+      <div class="difficulty-selector">
+        <button class="difficulty-btn active" data-speed="200">Mudah</button>
+        <button class="difficulty-btn" data-speed="150">Normal</button>
+        <button class="difficulty-btn" data-speed="100">Sulit</button>
+        <button class="difficulty-btn" data-speed="60">Ekstrem</button>
+      </div>
+
+      <div class="game-stats">
+        <div class="stat-box">
+          <div class="stat-label">Skor</div>
+          <div class="stat-value" id="score">0</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Skor Tertinggi</div>
+          <div class="stat-value" id="highScore">0</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Level</div>
+          <div class="stat-value" id="level">1</div>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+      <div class="game-controls">
+        <div class="controls-title">Kontrol</div>
+        <div class="controls-grid">
+          <div></div>
+          <button class="control-btn" data-direction="up">↑</button>
+          <div></div>
+          <button class="control-btn" data-direction="left">←</button>
+          <button class="control-btn" data-direction="pause">⏸</button>
+          <button class="control-btn" data-direction="right">→</button>
+          <div></div>
+          <button class="control-btn" data-direction="down">↓</button>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-over-screen" id="gameOverScreen">
+      <div class="game-over-content">
+        <div class="game-over-title">🎮 GAME OVER!</div>
+        <div class="final-score" id="finalScore">Skor Anda: 0</div>
+        <div class="final-score" id="newRecord" style="display: none">
+          🏆 REKOR BARU!
+        </div>
+        <button class="restart-btn" onclick="restartGame()">Main Lagi</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
